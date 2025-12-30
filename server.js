@@ -30,10 +30,10 @@ async function fetchToken() {
   return token;
 }
 
-app.all('/api/:path(*)', async (req, res) => {
+app.all('/api/*', async (req, res) => {
   try {
     const t = await fetchToken();
-    const proxiedPath = '/' + req.params.path;
+    const proxiedPath = req.originalUrl.replace(/^\/api/, '');
     const targetUrl = process.env.TARGET_BASE + proxiedPath;
 
     const headers = { ...req.headers, Authorization: `Bearer ${t}` };
