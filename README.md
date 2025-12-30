@@ -1,4 +1,5 @@
 # Agent-development-implementation-kit
+
 Agente para desenvolvimento de identidade de máquina. Para diferenciar arquivos gerados por ia
 
 ## WhatsApp API Proxy Server
@@ -8,19 +9,21 @@ This project provides a proxy server for the Serpro WhatsApp API, handling OAuth
 ### Setup
 
 1. Install dependencies:
-   ```
+
+   ```bash
    npm install
    ```
 
 2. Configure environment variables in `.env`:
-   - `TARGET_BASE`: https://whatsapp.serpro.gov.br
-   - `AUTH_URL`: The authentication endpoint URL from the Swagger docs (e.g., https://whatsapp.serpro.gov.br/oauth/token)
+   - `TARGET_BASE`: <https://whatsapp.serpro.gov.br>
+   - `AUTH_URL`: The authentication endpoint URL from the Swagger docs (e.g., <https://whatsapp.serpro.gov.br/oauth/token>)
    - `CLIENT_ID`: Your client ID
    - `CLIENT_SECRET`: Your client secret
    - `PORT`: 3000 (default)
 
 3. Run the server:
-   ```
+
+   ```bash
    node server.js
    ```
 
