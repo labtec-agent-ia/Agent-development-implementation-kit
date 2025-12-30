@@ -30,7 +30,7 @@ async function fetchToken() {
   return token;
 }
 
-app.use('/api/*', async (req, res) => {
+app.all('/api/*', async (req, res) => {
   try {
     const t = await fetchToken();
     const proxiedPath = req.originalUrl.replace(/^\/api/, '');
