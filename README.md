@@ -34,11 +34,6 @@ Make requests to `http://localhost:3000/api/<endpoint>`, and the proxy will fetc
 ### Deployment with Docker
 
 Build the image:
-```
-docker build -t whatsapp-proxy .
-```
-
+docker build -t whatsapp-proxy
 Run the container:
-```
 docker run -p 3000:3000 --env-file .env whatsapp-proxy
-```
